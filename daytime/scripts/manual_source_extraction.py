@@ -61,7 +61,7 @@ def process_fits_file(fits_file, fig_size, master_flat_field_normalized):
     plt.close()  # Close the current figure before processing the next file
 
     # Write x_clicks and y_clicks to a JSON file
-    output_filename = "/Users/physarah/Desktop/starlink-30775-58139U_locations.json"
+    output_filename = "/Users/physarah/Desktop/starlink-3366-51104U_locations_NEW.json"
     click_data = {'x_clicks': x_clicks, 'y_clicks': y_clicks}
 
     with open(output_filename, 'a') as json_file:
@@ -70,7 +70,7 @@ def process_fits_file(fits_file, fig_size, master_flat_field_normalized):
 
 
 if __name__ == "__main__":
-    fits_directory = "/Volumes/tycho/other/sarahs-ssa/01_18_24/starlink-30775-58139U/CapObj/2024-01-18_06_54_35Z"
+    fits_directory = "/Volumes/tycho/other/sarahs-ssa/01_29_24/starlink-3366-51104U/2024-01-29_05_03_15Z"
     master_flat_field_normalized = np.array(fits.getdata(
         "/Volumes/tycho/other/sarahs-ssa/01_18_24/Flats/master_rband_flat.fits"))
 
